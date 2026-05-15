@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  list-style: none;
+}
+
+ol button {
+  border: 1px solid grey;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px 15px;
+  background-color: beige;
+}
+
+ol button a {
+  text-decoration: none;
+  color: maroon;
+}

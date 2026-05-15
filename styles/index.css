@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"); */
+
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  font-family: "Bungee";
 }
 
 ol {
@@ -27,4 +31,25 @@ ol button {
 ol button a {
   text-decoration: none;
   color: maroon;
+  font-family: "Bungee";
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: maroon;
+  width: 100%;
+  color: beige;
+}
+
+footer ol {
+  font-weight: 200;
+  font-size: 12px;
+  display: flex;
+}
+
+.nav-items {
+  margin-bottom: 20px;
 }

@@ -49,6 +49,10 @@ footer ol {
   font-size: 12px;
   display: flex;
 }
+footer ol li a {
+  color: beige;
+  text-decoration: none;
+}
 
 .nav-items {
   margin-bottom: 20px;

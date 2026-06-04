@@ -8,6 +8,22 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Bungee";
+  background-color: beige;
+}
+
+nav {
+  z-index: 10;
+  background-color: rgba(128, 0, 0, 0.95);
+  height: 60px;
+  color: beige;
+  position: fixed;
+  width: 100%;
+}
+
+main {
+  position: relative;
+  top: 60px;
+  padding: 1em 5rem;
 }
 
 ol {
@@ -35,11 +51,11 @@ ol button a {
 }
 
 footer {
-  position: fixed;
-  bottom: 0px;
+  z-index: 10;
+  background-color: rgba(128, 0, 0, 0.95);
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  background-color: maroon;
   width: 100%;
   color: beige;
 }

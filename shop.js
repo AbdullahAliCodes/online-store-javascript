@@ -80,6 +80,8 @@ let products = [
 
 const productList = document.getElementById("products-list");
 
-products.map((product) => {
-  productList.append(`<li>${product.name}</li>`);
+products.forEach((product) => {
+  const li = document.createElement("li");
+  li.textContent = product.name;
+  productList.append(li);
 });

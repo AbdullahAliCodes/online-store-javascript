@@ -15,7 +15,7 @@
   \********************************/
 () {
 
-eval("{\n\n//# sourceURL=webpack://online-store-javascript/./src/pages/home/home.js?\n}");
+eval("{const firebaseConfig = {\n  apiKey: \"AIzaSyAK62daAjjrShcIbcst3zuCKvh0Ii0Q3kg\",\n  authDomain: \"urbanthreadsstore-db265.firebaseapp.com\",\n  projectId: \"urbanthreadsstore-db265\",\n  storageBucket: \"urbanthreadsstore-db265.firebasestorage.app\",\n  messagingSenderId: \"685476620860\",\n  appId: \"1:685476620860:web:70d4b3638fb84eaf31f139\",\n};\n\n\n//# sourceURL=webpack://online-store-javascript/./src/pages/home/home.js?\n}");
 
 /***/ }
 

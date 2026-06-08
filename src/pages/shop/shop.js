@@ -1,6 +1,9 @@
 import { collection, getDocs, getDoc } from "firebase/firestore";
 import { db } from "../../common/firebase.js";
 
+import "../../common/global.css";
+import "./shop.css";
+
 // let products = [
 //   {
 //     name: "Oversized Hoodie",
@@ -89,8 +92,16 @@ import { db } from "../../common/firebase.js";
 //   productList.append(li);
 // });
 
-const querySnapshot = await getDocs(collection(db, "products"));
+const colRef = collection(db, "products");
 
-querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
-});
+getDocs(colRef)
+  .then((snapshot) => {
+    let products = [];
+    snapshot.docs.forEach((doc) => {
+      products.push({ ...doc.data(), id: doc.id });
+    });
+    console.log(products);
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });

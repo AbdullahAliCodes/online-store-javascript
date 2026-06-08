@@ -1,3 +1,5 @@
+import "../../common/global.css";
+
 const firebaseConfig = {
   apiKey: "AIzaSyAK62daAjjrShcIbcst3zuCKvh0Ii0Q3kg",
   authDomain: "urbanthreadsstore-db265.firebaseapp.com",

@@ -35,4 +35,12 @@ export default {
       chunks: ["shop"],
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };

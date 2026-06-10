@@ -4,6 +4,20 @@ import { db } from "../../common/firebase.js";
 import "../../common/global.css";
 import "./shop.css";
 
+const colRef = collection(db, "products");
+
+getDocs(colRef)
+  .then((snapshot) => {
+    let products = [];
+    snapshot.docs.forEach((doc) => {
+      products.push({ ...doc.data(), id: doc.id });
+    });
+    console.log(products);
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
+
 // let products = [
 //   {
 //     name: "Oversized Hoodie",
@@ -91,17 +105,3 @@ import "./shop.css";
 //   li.textContent = product.name;
 //   productList.append(li);
 // });
-
-const colRef = collection(db, "products");
-
-getDocs(colRef)
-  .then((snapshot) => {
-    let products = [];
-    snapshot.docs.forEach((doc) => {
-      products.push({ ...doc.data(), id: doc.id });
-    });
-    console.log(products);
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });

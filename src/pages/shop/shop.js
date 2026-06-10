@@ -1,18 +1,29 @@
-import { collection, getDocs, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../common/firebase.js";
 
 import "../../common/global.css";
 import "./shop.css";
+
+const productList = document.getElementById("products");
 
 const colRef = collection(db, "products");
 
 getDocs(colRef)
   .then((snapshot) => {
     let products = [];
+    let productCardsHTML = "";
     snapshot.docs.forEach((doc) => {
       products.push({ ...doc.data(), id: doc.id });
+      productCardsHTML += `
+      <div class="product-card">
+        <img src="${doc.data().imageURL}" class="product-image" />
+        <h2>${doc.data().name}</h2>
+        <p class="prod-desc">${doc.data().description}</p>
+        <p>R ${doc.data().price}</p>
+      </div>`;
     });
     console.log(products);
+    productList.innerHTML += productCardsHTML;
   })
   .catch((err) => {
     console.log(err.message);

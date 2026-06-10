@@ -1,6 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 body {
   background-color: beige;
 }
 
-.item-block {
+#products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(128, 0, 0, 0.2);
+  padding: 2em;
+}
+.prod-desc {
+  font-family: "Roboto Mono";
+  color: rgb(71, 71, 71);
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
 }

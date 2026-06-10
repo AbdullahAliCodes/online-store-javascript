@@ -11,6 +11,8 @@ export default {
   entry: {
     home: "./src/pages/home/home.js",
     shop: "./src/pages/shop/shop.js",
+    login: "./src/pages/auth/login.js",
+    cart: "./src/pages/cart/cart.js",
   },
   output: {
     // [name] -> dynamically chooses home, shop, etc.. from entry object above
@@ -33,6 +35,16 @@ export default {
       template: "./src/pages/shop/shop.html",
       filename: "shop.html",
       chunks: ["shop"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/auth/login.html",
+      filename: "login.html",
+      chunks: ["login"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/cart/cart.html",
+      filename: "cart.html",
+      chunks: ["cart"],
     }),
   ],
   module: {

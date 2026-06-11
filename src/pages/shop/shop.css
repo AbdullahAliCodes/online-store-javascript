@@ -10,12 +10,23 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2em;
 }
+
 .product-card {
   display: flex;
   flex-direction: column;
   background-color: rgba(128, 0, 0, 0.2);
   padding: 2em;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px rgb(128, 132, 134);
+  border: solid 3px rgba(0, 0, 0, 0.739);
+  transition: 1s;
 }
+.product-card:hover {
+  transition: 0.3s;
+  box-shadow: 15px 15px 5px rgba(128, 0, 0, 0.789);
+  border: solid 3px rgba(128, 0, 0, 0.789);
+}
+
 .prod-desc {
   font-family: "Roboto Mono";
   color: rgb(71, 71, 71);

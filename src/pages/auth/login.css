@@ -1,8 +1,9 @@
 main {
-  height: 100vh;
+  height: calc(100vh - 60px);
   margin: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #645e74;
   background-color: beige;
 }

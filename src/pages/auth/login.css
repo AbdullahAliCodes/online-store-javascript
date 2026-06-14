@@ -13,6 +13,10 @@ main {
   --color-border: #d0d0d6;
 }
 
+.sign-up-form {
+  display: none;
+}
+
 .sign-in-card {
   display: flex;
   flex-direction: column;

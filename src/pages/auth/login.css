@@ -113,6 +113,7 @@ input {
   font-size: 16px;
   /* width: 100%; */
   outline-color: var(--color-primary);
+  cursor: text;
 }
 
 input {
@@ -141,6 +142,7 @@ input::placeholder {
   background: #f2f3f6;
   border-color: transparent;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .social-btn > img {
@@ -160,6 +162,7 @@ form > button[type="submit"] {
   border: 0;
   background: var(--color-primary);
   font-size: 17px;
+  cursor: pointer;
 }
 
 .or {
@@ -191,6 +194,10 @@ form > button[type="submit"] {
   background: #ffffff;
   font-size: 12px;
   padding: 0 12px;
+}
+
+.logout-btn {
+  cursor: pointer;
 }
 
 @media (width >= 485px) {

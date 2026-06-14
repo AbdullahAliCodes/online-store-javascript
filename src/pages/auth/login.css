@@ -87,6 +87,9 @@ form > img {
   margin-top: px;
   margin-bottom: 12px;
 }
+.our-logo {
+  height: 100px;
+}
 
 form :is(h2, h3) {
   text-align: center;

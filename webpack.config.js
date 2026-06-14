@@ -9,10 +9,10 @@ const __dirname = path.dirname(__filename);
 export default {
   mode: "development",
   entry: {
-    home: "./src/pages/home/home.js",
-    shop: "./src/pages/shop/shop.js",
+    home: ["./src/pages/home/home.js", "./src/common/header.js"],
+    shop: ["./src/pages/shop/shop.js", "./src/common/header.js"],
     login: "./src/pages/auth/login.js",
-    cart: "./src/pages/cart/cart.js",
+    cart: ["./src/pages/cart/cart.js", "./src/common/header.js"],
   },
   output: {
     // [name] -> dynamically chooses home, shop, etc.. from entry object above

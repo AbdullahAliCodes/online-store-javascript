@@ -9,7 +9,7 @@ import {
 import "../../common/global.css";
 import "./login.css";
 
-import logoUrl from "../../assets/images/logo.svg";
+import logoUrl from "../../assets/images/urban-threads.svg";
 import googleUrl from "../../assets/images/google.svg";
 import facebookUrl from "../../assets/images/facebook.svg";
 import { createElement } from "react";
@@ -78,19 +78,7 @@ loginForm.addEventListener("submit", (e) => {
 
   signInWithEmailAndPassword(auth, email, password)
     .then((cred) => {
-      //   console.log("User logged in: ", cred.user);
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-});
-
-// User Logging out
-const logoutBtn = document.querySelector(".logout-btn");
-logoutBtn.addEventListener("click", () => {
-  signOut(auth)
-    .then(() => {
-      //   console.log("User has been signed out");
+      window.location.href = "/";
     })
     .catch((err) => {
       console.log(err.message);

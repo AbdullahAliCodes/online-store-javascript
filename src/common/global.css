@@ -10,18 +10,41 @@ body {
   background-color: beige;
 }
 
+/* ---------- */
+/* - HEADER - */
+/* ---------- */
 nav {
   z-index: 10;
   background-color: rgba(128, 0, 0, 0.95);
-  height: 60px;
+  height: 80px;
   color: beige;
   position: fixed;
   width: 100%;
 }
 
-nav > .logo {
-  background: url("../assets/images/urban-threads-cream.svg");
+.our-logo {
+  height: 60px;
+  cursor: pointer;
 }
+
+#nav-home,
+#nav-products {
+  cursor: pointer;
+}
+
+#cart-icon {
+  height: 40px;
+  color: beige;
+}
+
+#log-out-btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* ---------- */
+/* MAIN AREAS */
+/* ---------- */
 
 main {
   position: relative;

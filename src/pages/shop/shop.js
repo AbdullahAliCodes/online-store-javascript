@@ -1,5 +1,5 @@
 import { db } from "../../common/firebase.js";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 
 import "../../common/global.css";
 import "./shop.css";

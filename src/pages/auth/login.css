@@ -30,10 +30,9 @@ main {
 }
 .back-icon {
   height: 15px;
-  translate: 2px;
 }
 .back-to-home-btn:hover {
-  text-decoration: underline maroon 3px;
+  text-decoration: underline #800000 3px;
   transition: 0.3s;
 }
 

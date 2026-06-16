@@ -34,8 +34,8 @@ socialImgs.forEach((img, index) => {
 backIconImg.src = backIcon;
 // ----------------------------------------------
 
-const backToHomeContainer = document.querySelector(".back-to-home-container");
 // Back to Home Button
+const backToHomeContainer = document.querySelector(".back-to-home-container");
 backToHomeContainer.addEventListener("click", () => {
   window.location.href = "/";
 });

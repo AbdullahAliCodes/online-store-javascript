@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 
 body {
   background-color: #f5f5dc;
@@ -41,6 +41,45 @@ main {
 .product-image {
   width: 300px;
   height: 300px;
+}
+
+.prod-card-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Roboto Mono";
+  font-weight: 900;
+}
+
+.add-to-cart-icon {
+  height: 17px;
+}
+.add-icons {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Mono";
+  margin-right: 10px;
+}
+.add-to-cart-btn {
+  background-color: beige;
+  color: black;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 10px;
+  box-shadow: 3px 3px 2px maroon;
+  font-family: "Roboto Mono";
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-to-cart-btn:active {
+  transition: transform 0.1s ease-out;
+  box-shadow: none;
+  transform: translate(2px, 2px);
 }
 
 @media screen and (max-width: 800px) {

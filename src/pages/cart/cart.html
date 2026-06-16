@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../../common/global.css" />
-    <link rel="stylesheet" href="./styles/cart.css" />
-
     <title>Your Cart</title>
   </head>
   <body>
@@ -37,7 +34,23 @@
     </header>
 
     <main>
-      <p>This is your cart</p>
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <!-- Cart Icon -->
+        <span><img class="cart-icon" alt="cart-icon"></span>
+        <!-- Heading -->
+        <h1>Your Cart</h1>
+
+      </div>
+      <!-- Cart Large Container Card -->
+      <div class="cart-card">
+        <div class="cart-items"></div>
+        <div class="order-summary">
+          <h3>Order Summary:</h3>
+          <h4>Total:</h4>
+          <p class="cart-total-amt"></p>
+        </div>
+      </div>
     </main>
 
     <footer>

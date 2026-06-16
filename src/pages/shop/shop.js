@@ -1,10 +1,11 @@
-import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../common/firebase.js";
+import { collection, getDocs } from "firebase/firestore";
 
 import "../../common/global.css";
 import "./shop.css";
 
-import cartIcon from "../../assets/icons/cart-maroon.svg";
+import cartUrl from "../../assets/icons/cart-maroon.svg";
+import priceTagUrl from "../../assets/icons/price-tag.svg";
 
 const productList = document.getElementById("products");
 
@@ -19,7 +20,7 @@ getDocs(colRef)
       productCardsHTML += `
       <div class="product-card">
         <img src="${doc.data().imageURL}" class="product-image" />
-        <h2>${doc.data().name}</h2>
+        <h3>${doc.data().name}</h3>
         <p class="prod-desc">${doc.data().description}</p>
         <p class="prod-card-footer">
           <span>R ${doc.data().price}</span>
@@ -27,7 +28,7 @@ getDocs(colRef)
             <button class="add-to-cart-btn">
               <span class="add-icons">
                 +
-                <img src="${cartIcon}" class="add-to-cart-icon" />              
+                <img src="${cartUrl}" class="add-to-cart-icon" />              
               </span>
               <span>Add to Cart</span>
             </button>
@@ -41,3 +42,7 @@ getDocs(colRef)
   .catch((err) => {
     console.log(err.message);
   });
+
+// Products Page Header
+const priceTagImg = document.querySelector(".price-tag-icon");
+priceTagImg.src = priceTagUrl;

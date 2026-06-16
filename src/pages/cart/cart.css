@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cart-icon {
+  height: 50px;
+}
+
+.cart-card {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 5px rgba(128, 0, 0, 0.789);
+  border: solid 3px rgba(0, 0, 0, 0.739);
+  display: flex;
+}
+
+.cart-items {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-summary {
+  width: 30%;
+}
+
+.cart-prod-img {
+  border: 1px solid black;
+  height: 110px;
+  width: 100px;
+}
+
+.cart-item {
+  width: 100%;
+  border: 1px solid black;
+  padding: 1em;
+  display: grid;
+  grid-template-areas: "I I I D D D D D D R R R";
+}
+
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-prod-img {
+  grid-area: I;
+}
+.cart-item-details {
+  grid-area: D;
+}
+.cart-item-right {
+  grid-area: R;
+}
+
+.cart-prod-price {
+  font-family: Roboto Mono;
+}
+
+.cart-total-amt {
+  font-family: Roboto Mono;
+}

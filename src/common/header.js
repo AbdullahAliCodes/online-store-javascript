@@ -77,3 +77,20 @@ logOutBtn.addEventListener("click", () => {
       console.log(err.message);
     });
 });
+
+// Log in / Log out styling
+const logInOutBtn = document.querySelector(".login-out-btn");
+const logInText = document.getElementById("log-in-btn");
+const logOutText = document.getElementById("log-out-btn");
+logInOutBtn.addEventListener("mouseenter", () => {
+  logInOutBtn.style.backgroundColor = "beige";
+  logInOutBtn.style.transition = "0.3s";
+  logInText.style.color = "maroon";
+  logOutText.style.color = "maroon";
+});
+logInOutBtn.addEventListener("mouseleave", () => {
+  logInOutBtn.style.backgroundColor = "maroon";
+  logInOutBtn.style.transition = "1s";
+  logInText.style.color = "beige";
+  logOutText.style.color = "beige";
+});

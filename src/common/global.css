@@ -62,7 +62,7 @@ nav {
 
 .login-out-btn {
   cursor: pointer;
-  width: 145px;
+  width: 150px;
 }
 
 #log-out-btn {
@@ -75,7 +75,7 @@ nav {
 
 main {
   position: relative;
-  top: 60px;
+  top: 80px;
   padding: 1em 5rem;
   min-height: calc(100vh - 220px);
 }
@@ -89,18 +89,18 @@ ol {
 }
 
 ol button {
-  border: 1px solid grey;
+  border: 2px solid beige;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 10px 15px;
-  background-color: beige;
+  background-color: maroon;
 }
 
 ol button a {
   text-decoration: none;
-  color: maroon;
+  color: beige;
   font-family: "Bungee";
 }
 

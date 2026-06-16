@@ -10,6 +10,15 @@ main {
   flex-direction: column;
 }
 
+.prods-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.price-tag-icon {
+  height: 50px;
+}
+
 #products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -75,6 +84,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px transparent solid;
+}
+.add-to-cart-btn:hover {
+  border: 1px maroon solid;
 }
 .add-to-cart-btn:active {
   transition: transform 0.1s ease-out;

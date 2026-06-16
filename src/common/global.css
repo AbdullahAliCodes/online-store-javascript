@@ -30,16 +30,43 @@ nav {
 #nav-home,
 #nav-products {
   cursor: pointer;
+  transition: 1s;
+  text-align: center;
+  padding: 5px 8px;
+}
+#nav-home:hover,
+#nav-products:hover {
+  background-color: beige;
+  color: maroon;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.nav-left,
+.nav-middle,
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 #cart-icon {
+  cursor: pointer;
   height: 40px;
   color: beige;
+}
+#cart-icon:hover {
+  height: 42px;
+}
+
+.login-out-btn {
+  cursor: pointer;
+  width: 145px;
 }
 
 #log-out-btn {
   display: none;
-  cursor: pointer;
 }
 
 /* ---------- */
@@ -50,6 +77,7 @@ main {
   position: relative;
   top: 60px;
   padding: 1em 5rem;
+  min-height: calc(100vh - 220px);
 }
 
 ol {

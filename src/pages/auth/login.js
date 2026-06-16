@@ -9,13 +9,15 @@ import {
 import "../../common/global.css";
 import "./login.css";
 
+// --------- HANDLING IMAGES (WEBPACK) ---------
 import logoUrl from "../../assets/images/urban-threads.svg";
 import googleUrl from "../../assets/images/google.svg";
 import facebookUrl from "../../assets/images/facebook.svg";
-import { createElement } from "react";
+import backIcon from "../../assets/icons/back-icon.svg";
 
 const logoImgs = document.querySelectorAll("form > img");
 const socialImgs = document.querySelectorAll(".social-btn > img");
+const backIconImg = document.querySelector(".back-icon");
 
 // Load the logo for each query selected above
 logoImgs.forEach((img) => {
@@ -28,6 +30,14 @@ socialImgs.forEach((img, index) => {
   } else {
     img.src = facebookUrl; // Indexes 1 and 3
   }
+});
+backIconImg.src = backIcon;
+// ----------------------------------------------
+
+const backToHomeContainer = document.querySelector(".back-to-home-container");
+// Back to Home Button
+backToHomeContainer.addEventListener("click", () => {
+  window.location.href = "/";
 });
 
 // Toggle between Login & Signup

@@ -34,7 +34,7 @@ onSnapshot(productsColRef, (snapshot) => {
               +
               <img src="${cartUrl}" class="add-to-cart-icon" />              
             </span>
-            <span>Add to Cart</span>
+            <span class="add-to-cart-text">Add to Cart</span>
           </button>
         </span>
       </p>
@@ -45,15 +45,24 @@ onSnapshot(productsColRef, (snapshot) => {
 });
 
 // Handle Add To Cart
-const handleAddToCart = (id) => {};
 productList.addEventListener("click", async (event) => {
-  event.target.disabled = true;
-  if (event.target.closest(".add-to-cart-btn")) {
-    onAuthStateChanged(auth, async (user) => {
+  const clickedButton = event.target.closest(".add-to-cart-btn");
+
+  if (clickedButton) {
+    clickedButton.disabled = true;
+
+    const addToCartBtnText = event.target.closest(".add-to-cart-text");
+    if (addToCartBtnText) {
+      addToCartBtnText.innerHTML = "<strong>Adding...</strong>";
+    }
+
+    try {
+      const user = auth.currentUser;
+
       if (user) {
         const clickedDocId = event.target.getAttribute("data-id");
 
-        setDoc(
+        await setDoc(
           doc(db, "carts", `${user.uid}`),
           {
             [clickedDocId]: clickedDocId,
@@ -63,9 +72,20 @@ productList.addEventListener("click", async (event) => {
 
         console.log(`Added to cart: ${clickedDocId}`);
         console.log(`For user: ${user.uid}`);
+
+        if (addToCartBtnText) {
+          addToCartBtnText.innerHTML = "<strong>Added!</strong>";
+        }
       } else {
         window.location.href = "/login.html";
       }
-    });
+    } catch (error) {
+      console.log("Something went wrong:" + error);
+      if (addToCartBtnText) {
+        addToCartBtnText.innerHTML = "<strong>Error!</strong>";
+      }
+    } finally {
+      clickedButton.disabled = false;
+    }
   }
 });

@@ -59,9 +59,11 @@ const logOutBtn = document.getElementById("log-out-btn");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
+    cartBtn.style.display = "block";
     logOutBtn.style.display = "block";
     logInBtn.style.display = "none";
   } else {
+    cartBtn.style.display = "none";
     logInBtn.style.display = "block";
     logOutBtn.style.display = "none";
   }
